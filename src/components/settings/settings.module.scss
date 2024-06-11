@@ -1,0 +1,79 @@
+@import '../../mixin.scss';
+
+.parent {
+    @include flex(start, space-between, row, nowrap);
+    width: 100%;
+
+
+    .rectangle {
+        min-width: 200px;
+        width: 300px;
+        max-width: 400px;
+        padding-inline: 5px;
+        @include flex(start, start, column, nowrap);
+        gap: 3px;
+        position: relative;
+
+        >div:first-of-type {
+            @include flex(center, start, row, nowrap);
+            height: 48px;
+            width: 100%;
+
+            >div:first-of-type {
+                height: inherit;
+                aspect-ratio: 1/1;
+                @include flex(center, center, row, nowrap);
+                &:hover {
+                    background: rgba(255, 255, 255, 0.06);
+                }
+
+            }
+        }
+
+        >.setting_item {
+            @include flex(center, start, row, nowrap);
+            padding: 9px 15px;
+            gap: 15px;
+            width: -webkit-fill-available;
+
+            &:hover {
+                outline: 1px solid rgba(255, 255, 255, 0.06);
+                outline-offset: -1px;
+                border-radius: 3px;
+                background: rgba(255, 255, 255, 0.06);
+                cursor: pointer;
+            }
+
+            >p {
+                @include font(rgb(255, 255, 255), Segoe UI Variable Static Text, 14px, 400, 20px);
+            }
+
+            &:nth-of-type(8) {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    height: 1px;
+                    background-color: rgba(255, 255, 255, 0.08);
+                    top: calc(100% + 3.5px);
+                    left: 0;
+                }
+            }
+
+            &:nth-of-type(9) {
+                margin-top: 3.5px;
+            }
+        }
+    }
+
+    .resize_handle {
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -5px;
+        cursor: ew-resize;
+    }
+}

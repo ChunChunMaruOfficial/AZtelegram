@@ -1,0 +1,30 @@
+@import '../../mixin.scss';
+
+
+.parent {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.06);
+    display: inline-flex;
+    padding: 6px 12px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.79);
+    margin-left: 16px;
+
+    >input {
+        background-color: rgba(0, 0, 0, 0);
+        @include font(rgba(255, 255, 255), Segoe UI Variable Static Text, 14px, 400);
+
+        &::placeholder {
+            @include font(rgba(255, 255, 255, 0.79), Segoe UI Variable Static Text, 14px, 400);
+        }
+    }
+
+    >img {
+        height: .7em;
+        margin-inline: 3%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

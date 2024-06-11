@@ -1,18 +1,10 @@
-import style from './index.module.scss'
+import Search_input from '../search__input/search__input'
 
-
-function Index() {
+export default function Index() {
 
   return (
     <>
-      <div className={style.trex}>
-        <p className={style.leftTop}></p>
-        <p className={style.rightTop}></p>
-        <p className={style.rightBottom}></p>
-        <p className={style.leftBottom}></p>
-      </div>
+      <Search_input />
     </>
   )
 }
-
-export default Index

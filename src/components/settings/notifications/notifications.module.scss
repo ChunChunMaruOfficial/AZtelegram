@@ -1,0 +1,109 @@
+@import '../../../mixin.scss';
+
+.parent {
+    width: 100%;
+    padding: 43px 55px;
+    border-radius: 7px 0px 0px 0px;
+    background: rgba(58, 58, 58, 0.3);
+    >p:first-of-type {
+        @include font(rgb(255, 255, 255), Segoe UI Variable Static Display, 28px, 400, 36px);
+        margin-bottom: 26px;
+    }
+
+    >.notifications_list {
+        padding: 13px 18px;
+        @include flex(center, space-between, row, nowrap);
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.05);
+        margin-bottom: 5px;
+
+        >div {
+            @include flex(center, center, row, nowrap);
+            gap: 20px; 
+
+            >span {
+                @include flex(start, center, column);
+
+                >p:first-of-type {
+                    @include font(rgb(255, 255, 255), Segoe UI Variable Static Text, 14px, 400, 20px);
+                }
+
+                >p:nth-of-type(2) {
+                    @include font(rgba(255, 255, 255, 0.79), Segoe UI Variable Static Text, 12px, 400, 16px);
+                }
+            }
+        }
+        >img:last-of-type{
+            height: .6em;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    >.menu_items {
+        >p:first-of-type {
+            @include font(rgb(255, 255, 255), Segoe UI Variable Static Display, 14px, 400, 16px);
+            margin-block: 34px 12px;
+        }
+
+        >div {
+            padding-inline: 13px 23px;
+            @include flex(start, center, column);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+
+            >span {
+                @include flex(center, start, row, nowrap);
+                gap: 10px;
+                padding-block: 14px;
+                width: 100%;
+                @include font(rgb(255, 255, 255), Segoe UI Variable Static Display, 14px, 400, 20px);
+
+            }
+
+            >span:first-of-type {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+        }
+    }
+
+    >div:last-of-type {
+        padding: 13px 18px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 3px;
+        @include flex(start, center, column);
+        margin-block: 35px;
+        >p:first-of-type {
+            @include font(rgb(255, 153, 164), Segoe UI Variable Static Text, 14px, 400, 20px);
+        }
+
+        >p:nth-of-type(2) {
+            @include font(rgba(255, 255, 255, 0.79), Segoe UI Variable Static Small, 12px, 400, 16px);
+        }
+    }
+}
+
+.rotate{
+    animation: rotate .3s ease-in-out forwards;
+}
+.rerotate{
+    animation: rerotate .3s ease-in-out forwards;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}
+@keyframes rerotate {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
