@@ -1,1 +1,4 @@
-console.log(1);
+let a = "*"
+
+
+console.log(a * 7);
