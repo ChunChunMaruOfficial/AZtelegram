@@ -1,4 +1,4 @@
-let a = "*"
+let a = "10" + 2 * "5"
 
 
-console.log(a * 7);
+console.log(a);
