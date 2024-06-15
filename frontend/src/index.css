@@ -1,4 +1,11 @@
 /* Reset and base styles  */
+body {
+  background-image: url("../wrapperFHD.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 * {
   padding: 0px;
   margin: 0px;
