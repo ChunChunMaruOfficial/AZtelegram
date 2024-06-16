@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@imagemarker/use-text-width": "^0.4.4",
     "react": "^19.0.0-beta-26f2496093-20240514",
     "react-dom": "^19.0.0-beta-26f2496093-20240514",
     "react-router-dom": "^6.23.1",
-    "sass": "^1.77.5"
+    "sass": "^1.77.5",
+    "string-pixel-width": "^1.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

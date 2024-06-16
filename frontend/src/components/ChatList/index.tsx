@@ -5,11 +5,12 @@ import {
   SetHandleChats,
 } from "../../types/ChatListTypes";
 import style from "./ChatList.module.scss";
+import avatar from "../../../public/avatar.jpg";
 
 export const ChatList = () => {
   const width = window.innerWidth / 100;
   const widthOneFifth = width * 5;
-  const widthQuarter = width * 15;
+  const widthQuarter = width * 20;
   const widthHalf = width * 60;
 
   const [chatsWidth, setChatsWidth] = useState<number>(widthQuarter);
@@ -25,6 +26,13 @@ export const ChatList = () => {
 
   const resizeChatsList = (positionX: number) => {
     if (widthQuarter >= positionX) {
+      setChatsWidth(widthQuarter);
+      setVisibleWidth({
+        display: "block",
+      });
+      setVisibleHeader({
+        justifyContent: "start",
+      });
       if (widthOneFifth >= positionX) {
         setVisibleWidth({
           display: "none",
@@ -102,9 +110,2103 @@ export const ChatList = () => {
           type="text"
         />
         <div style={handleChats} className={style.chatlist__body__list}>
-          {[...Array(20)].map((_, index) => (
-            <div key={index} className={style.body__list__contact}></div>
-          ))}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>{" "}
+          <div style={visibleHeader} className={style.body__list__contact}>
+            <div className={style.list__contact__img}>
+              <img src={avatar} alt="avatar" />
+            </div>
+            <p style={visibleWidth} className={style.list__contact__userName}>
+              KANTNOLI
+            </p>
+
+            <p style={visibleWidth} className={style.list__contact__content}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Provident inventore sed deleniti dolorem accusamus id ipsa
+              tempore, illo, assumenda dicta praesentium aliquam quis nisi
+              expedita unde neque alias pariatur adipisci!
+            </p>
+            <p
+              style={visibleWidth}
+              className={style.list__contact__LongContent}
+            >
+              . . .
+            </p>
+            <p style={visibleWidth} className={style.list__contact__time}>
+              2:49 PM
+            </p>
+          </div>
         </div>
         <div className={style.chatlist__body_drag}></div>
       </div>

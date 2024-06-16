@@ -75,23 +75,85 @@
       width: calc(100% - 3px);
 
       .body__list__contact {
-        margin-top: 2px;
+        position: relative;
+        display: flex;
+        align-items: center;
         width: calc(100%);
         height: 70px;
-        background-color: green;
+        margin-top: 2px;
+
+        .list__contact__userName {
+          word-break: break-all;
+          overflow: hidden;
+          width: 60%;
+          height: 18px;
+          position: absolute;
+          top: 10px;
+          left: 65px;
+          font-weight: bold;
+          font-size: 16px;
+          color: white;
+        }
+
+        .list__contact__content {
+          overflow: hidden;
+          height: 18px;
+          width: calc(100% - 100px);
+          position: absolute;
+          bottom: 10px;
+          left: 65px;
+
+          word-break: break-all;
+          font-size: 16px;
+          color: #888888;
+        }
+
+        .list__contact__LongContent {
+          height: 18px;
+          position: absolute;
+          bottom: 10px;
+          right: 12px;
+          font-size: 16px;
+          color: #888888;
+        }
+
+        .list__contact__time {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+
+          font-size: 14px;
+          color: #888888;
+        }
+
+        .list__contact__img {
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: red;
+          border-radius: 50%;
+
+          width: 60px;
+          height: 60px;
+
+          img {
+            height: 100%;
+          }
+        }
       }
     }
 
-    .chatlist__body__list_active::-webkit-scrollbar {
+    .chatlist__body__list::-webkit-scrollbar {
       position: relative;
       right: -10px;
       width: 3px;
     }
-    .chatlist__body__list_active::-webkit-scrollbar-thumb {
+    .chatlist__body__list::-webkit-scrollbar-thumb {
       background-color: #979a9f;
       border-radius: 2px;
 
-      transition: .2s ease-in-out;
+      transition: 0.2s ease-in-out;
     }
   }
 }
