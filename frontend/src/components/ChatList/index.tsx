@@ -5,9 +5,9 @@ import style from "./ChatList.module.scss";
 
 export const ChatList = () => {
   const width = window.innerWidth / 100;
-  const widthOneFifth = useMemo(() => width * 5, [width]);
-  const widthQuarter = useMemo(() => width * 15, [width]);
-  const widthHalf = useMemo(() => width * 60, [width]);
+  const widthOneFifth = width * 5;
+  const widthQuarter = width * 15;
+  const widthHalf = width * 60;
   //(window.innerWidth / 100) * 20
   //ширина экрана на 100, получаем 1vw - и ширину ставим на 20vw
   const [chatsWidth, setChatsWidth] = useState<number>(widthQuarter);
@@ -104,9 +104,7 @@ export const ChatList = () => {
           type="text"
         />
 
-        <div
-          className={style.chatlist__body_drag}
-        ></div>
+        <div className={style.chatlist__body_drag}></div>
       </div>
     </section>
   );
