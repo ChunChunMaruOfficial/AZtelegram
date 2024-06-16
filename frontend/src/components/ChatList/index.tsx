@@ -79,7 +79,7 @@ export const ChatList = () => {
       document.body.classList.remove(style.removeSelect);
       document.body.style.cursor = "default";
     });
-  }, []);
+  });
 
   return (
     <section className={style.chatlist}>
