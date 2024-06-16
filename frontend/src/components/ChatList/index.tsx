@@ -105,7 +105,6 @@ export const ChatList = () => {
         />
 
         <div
-          onResize={() => console.log("resize")}
           className={style.chatlist__body_drag}
         ></div>
       </div>
