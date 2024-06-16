@@ -1,9 +1,24 @@
 /* Reset and base styles  */
 body {
   background-image: url("../wrapperFHD.png");
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+*::-webkit-scrollbar {
+  position: relative;
+  right: -10px;
+  width: 3px;
+
+  transition: .2s ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff00;
+  border-radius: 2px;
+
+  transition: .2s ease-in-out;
 }
 
 * {

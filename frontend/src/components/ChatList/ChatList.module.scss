@@ -4,7 +4,9 @@
   height: 100vh;
 
   .chatlist__body {
-    padding: 10px;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-left: 10px;
     position: relative;
     height: 100%;
     background-color: #2020206c;
@@ -12,7 +14,7 @@
 
     .chatlist__body__search {
       margin-top: 15px;
-      width: 100%;
+      width: calc(100% - 10px);
       height: 30px;
       background-color: #ffffff18;
       border-radius: 4px;
@@ -33,7 +35,8 @@
       width: 100%;
 
       .body__header__title {
-        margin-bottom: -4px;
+        font-size: 18px;
+        margin-bottom: -5px;
         margin-left: 15px;
         font-weight: 400;
         color: white;
@@ -64,6 +67,31 @@
       width: 0.3vw;
       height: 100%;
       cursor: ew-resize;
+    }
+
+    .chatlist__body__list {
+      overflow-y: scroll;
+      margin-top: 1vh;
+      width: calc(100% - 3px);
+
+      .body__list__contact {
+        margin-top: 2px;
+        width: calc(100%);
+        height: 70px;
+        background-color: green;
+      }
+    }
+
+    .chatlist__body__list_active::-webkit-scrollbar {
+      position: relative;
+      right: -10px;
+      width: 3px;
+    }
+    .chatlist__body__list_active::-webkit-scrollbar-thumb {
+      background-color: #979a9f;
+      border-radius: 2px;
+
+      transition: .2s ease-in-out;
     }
   }
 }

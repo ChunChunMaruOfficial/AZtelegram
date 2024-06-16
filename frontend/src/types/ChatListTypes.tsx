@@ -7,3 +7,8 @@ export type ChatListVanish = {
 export type BurgerPosition = {
   justifyContent?: string;
 };
+
+//Регул отображение списка чатов
+export type SetHandleChats = {
+  height?: string;
+};
