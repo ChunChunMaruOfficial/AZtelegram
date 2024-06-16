@@ -4,12 +4,60 @@
   height: 100vh;
 
   .chatlist__body {
+    padding: 10px;
     position: relative;
     height: 100%;
     background-color: #2020206c;
     backdrop-filter: blur(50px);
 
+    .chatlist__body__search {
+      margin-top: 15px;
+      width: 100%;
+      height: 30px;
+      background-color: #ffffff18;
+      border-radius: 4px;
+      border-bottom: 1px solid white;
+      padding-left: 8px;
+      color: white;
+
+      background-image: url("../../assets/img/everyone/search.png");
+      background-position-x: 97%;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      background-size: 15px;
+    }
+
+    .chatlist__body__header {
+      display: flex;
+      align-items: end;
+      width: 100%;
+
+      .body__header__title {
+        margin-bottom: -4px;
+        margin-left: 15px;
+        font-weight: 400;
+        color: white;
+      }
+
+      .body__header__menu {
+        cursor: pointer;
+
+        .header__menu__button:nth-child(2) {
+          top: 50%;
+          transform: translateY(-20%);
+        }
+        .header__menu__button {
+          margin-top: 5px;
+          border-radius: 3px;
+          width: 23px;
+          height: 2px;
+          background-color: white;
+        }
+      }
+    }
+
     .chatlist__body_drag {
+      top: 0;
       right: 0;
       position: absolute;
       background-color: #ffffff00;
@@ -18,4 +66,13 @@
       cursor: ew-resize;
     }
   }
+}
+
+.removeSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
