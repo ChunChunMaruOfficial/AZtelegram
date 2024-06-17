@@ -4,7 +4,9 @@
   height: 100vh;
 
   .chatlist__body {
-    padding: 10px;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-left: 10px;
     position: relative;
     height: 100%;
     background-color: #2020206c;
@@ -12,7 +14,7 @@
 
     .chatlist__body__search {
       margin-top: 15px;
-      width: 100%;
+      width: calc(100% - 10px);
       height: 30px;
       background-color: #ffffff18;
       border-radius: 4px;
@@ -33,7 +35,8 @@
       width: 100%;
 
       .body__header__title {
-        margin-bottom: -4px;
+        font-size: 18px;
+        margin-bottom: -5px;
         margin-left: 15px;
         font-weight: 400;
         color: white;
@@ -64,6 +67,93 @@
       width: 0.3vw;
       height: 100%;
       cursor: ew-resize;
+    }
+
+    .chatlist__body__list {
+      overflow-y: scroll;
+      margin-top: 1vh;
+      width: calc(100% - 3px);
+
+      .body__list__contact {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: calc(100%);
+        height: 70px;
+        margin-top: 2px;
+
+        .list__contact__userName {
+          word-break: break-all;
+          overflow: hidden;
+          width: 60%;
+          height: 18px;
+          position: absolute;
+          top: 10px;
+          left: 65px;
+          font-weight: bold;
+          font-size: 16px;
+          color: white;
+        }
+
+        .list__contact__content {
+          overflow: hidden;
+          height: 18px;
+          width: calc(100% - 100px);
+          position: absolute;
+          bottom: 10px;
+          left: 65px;
+
+          word-break: break-all;
+          font-size: 16px;
+          color: #888888;
+        }
+
+        .list__contact__LongContent {
+          height: 18px;
+          position: absolute;
+          bottom: 10px;
+          right: 12px;
+          font-size: 16px;
+          color: #888888;
+        }
+
+        .list__contact__time {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+
+          font-size: 14px;
+          color: #888888;
+        }
+
+        .list__contact__img {
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: red;
+          border-radius: 50%;
+
+          width: 60px;
+          height: 60px;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .chatlist__body__list::-webkit-scrollbar {
+      position: relative;
+      right: -10px;
+      width: 3px;
+    }
+    .chatlist__body__list::-webkit-scrollbar-thumb {
+      background-color: #979a9f;
+      border-radius: 2px;
+
+      transition: 0.2s ease-in-out;
     }
   }
 }
