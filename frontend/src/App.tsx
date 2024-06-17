@@ -3,7 +3,7 @@ import { ChatList } from "./components/ChatList";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
-  //test
+  //testing
   return (
     <Routes>
       <Route path="/" element={<h1>Work</h1>} />
