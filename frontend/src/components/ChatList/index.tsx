@@ -9,11 +9,13 @@ import style from "./ChatList.module.scss";
 import avatar from "../../../public/avatar.jpg";
 
 export const ChatList = () => {
+  //Статичные размеры, относительно экрана
   const width = window.innerWidth / 100;
   const widthOneFifth = width * 5;
   const widthQuarter = width * 20;
   const widthHalf = width * 60;
 
+  //Стейты для работы с стилями
   const [chatsWidth, setChatsWidth] = useState<number>(widthQuarter);
   const [visibleWidth, setVisibleWidth] = useState<ChatListVanish>({
     display: "block",
@@ -24,10 +26,8 @@ export const ChatList = () => {
   const [handleChats, setHandleChats] = useState<SetHandleChats>({
     height: "calc(97% - 40px)",
   });
-  const [menuMargin, setMenuMargin] = useState<SetMargin>({
-    marginLeft: "inherit",
-  });
 
+  //Заготовка настройки для какого то положения
   const settingsLittle = () => {
     setVisibleWidth({
       display: "none",
@@ -38,7 +38,6 @@ export const ChatList = () => {
     setHandleChats({
       height: "97%",
     });
-    setMenuMargin({ marginLeft: "-5px" });
   };
   const settingsBig = () => {
     setChatsWidth(widthQuarter);
@@ -48,52 +47,63 @@ export const ChatList = () => {
     setVisibleHeader({
       justifyContent: "start",
     });
-    setMenuMargin({ marginLeft: "inherit" });
   };
 
+  //Функция для изменения ширины, с условиями
   const resizeChatsList = (positionX: number) => {
     if (widthQuarter >= positionX) {
-      settingsBig()
+      settingsBig();
       if (widthOneFifth >= positionX) {
-        settingsLittle()
+        settingsLittle();
         setChatsWidth(widthOneFifth);
       }
     } else if (positionX <= widthHalf) {
-      settingsBig()
+      settingsBig();
       setChatsWidth(positionX);
     } else setChatsWidth(widthHalf);
   };
 
+  //Отслеживание, перетаскивание и т.д.
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
+      //меняем ширину списка чатов, при активации
       resizeChatsList(event.clientX);
     };
 
     const handleMouseDown = (event: MouseEvent) => {
+      //При клике, проверяем обьект на нужный, и в случае, если это конец списка чатов
+      //то меняемкурсор, отслеживаем жвижение и добавляем клаcc, которые запрещает выделять
       if (
         (event.target as HTMLElement).className === style.chatlist__body_drag
       ) {
         document.addEventListener("mousemove", handleMouseMove);
-        document.body.classList.add(style.removeSelect);
         document.body.style.cursor = "ew-resize";
       }
     };
 
     const handleMouseUp = () => {
+      //после поднятия кнопки, удаляем отслеживание мышки и делаем нормальный курсор
       document.removeEventListener("mousemove", handleMouseMove);
-      document.body.classList.remove(style.removeSelect);
       document.body.style.cursor = "default";
     };
 
+    //По умолчанию отслеживаем только клик и поднятие клика, чтобы лишний раз не нагружать mousemove
     document.addEventListener("mousedown", handleMouseDown);
     document.addEventListener("mouseup", handleMouseUp);
 
     return () => {
+      //удаляем отслеживание, чтобы не копилось
       document.removeEventListener("mousedown", handleMouseDown);
       document.removeEventListener("mouseup", handleMouseUp);
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  //для спама чатов
+  const list = [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0,
+  ];
 
   return (
     <section className={style.chatlist}>
@@ -102,7 +112,7 @@ export const ChatList = () => {
         className={style.chatlist__body}
       >
         <div style={visibleHeader} className={style.chatlist__body__header}>
-          <div style={menuMargin} className={style.body__header__menu}>
+          <div className={style.body__header__menu}>
             <p className={style.header__menu__button}></p>
             <p className={style.header__menu__button}></p>
             <p className={style.header__menu__button}></p>
@@ -118,55 +128,30 @@ export const ChatList = () => {
           type="text"
         />
         <div style={handleChats} className={style.chatlist__body__list}>
-          <div style={visibleHeader} className={style.body__list__contact}>
-            <div className={style.list__contact__img}>
-              <img src={avatar} alt="avatar" />
-            </div>
-            <p style={visibleWidth} className={style.list__contact__userName}>
-              KANTNOLI
-            </p>
-
-            <p style={visibleWidth} className={style.list__contact__content}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Provident inventore sed deleniti dolorem accusamus id ipsa
-              tempore, illo, assumenda dicta praesentium aliquam quis nisi
-              expedita unde neque alias pariatur adipisci!
-            </p>
-            <p
-              style={visibleWidth}
-              className={style.list__contact__LongContent}
+          {list.map((el, id) => (
+            <div
+              key={id}
+              style={visibleHeader}
+              className={style.body__list__contact}
             >
-              . . .
-            </p>
-            <p style={visibleWidth} className={style.list__contact__time}>
-              2:49 PM
-            </p>
-          </div>
+              <div className={style.list__contact__img}>
+                <img src={avatar} alt="avatar" />
+              </div>
+              <p style={visibleWidth} className={style.list__contact__userName}>
+                KANTNOLI
+              </p>
 
-          <div style={visibleHeader} className={style.body__list__contact}>
-            <div className={style.list__contact__img}>
-              <img src={avatar} alt="avatar" />
+              <p style={visibleWidth} className={style.list__contact__content}>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Provident inventore sed deleniti dolorem accusamus id ipsa
+                tempore, illo, assumenda dicta praesentium aliquam quis nisi
+                expedita unde neque alias pariatur adipisci!
+              </p>
+              <p style={visibleWidth} className={style.list__contact__time}>
+                2:49 PM
+              </p>
             </div>
-            <p style={visibleWidth} className={style.list__contact__userName}>
-              KANTNOLI
-            </p>
-
-            <p style={visibleWidth} className={style.list__contact__content}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Provident inventore sed deleniti dolorem accusamus id ipsa
-              tempore, illo, assumenda dicta praesentium aliquam quis nisi
-              expedita unde neque alias pariatur adipisci!
-            </p>
-            <p
-              style={visibleWidth}
-              className={style.list__contact__LongContent}
-            >
-              . . .
-            </p>
-            <p style={visibleWidth} className={style.list__contact__time}>
-              2:49 PM
-            </p>
-          </div>
+          ))}
         </div>
         <div className={style.chatlist__body_drag}></div>
       </div>
