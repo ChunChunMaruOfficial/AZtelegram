@@ -6,20 +6,20 @@
   .chatlist__body {
     overflow: hidden;
     padding-top: 10px;
-    padding-left: 10px;
     position: relative;
     height: 100%;
     background-color: #2020206c;
     backdrop-filter: blur(50px);
 
     .chatlist__body__search {
+      margin-left: 10px;
       margin-top: 15px;
-      width: calc(100% - 10px);
+      width: calc(100% - 20px);
       height: 30px;
       background-color: #ffffff18;
       border-radius: 4px;
       border-bottom: 1px solid white;
-      padding-left: 8px;
+      padding-left: 10px;
       color: white;
 
       background-image: url("../../assets/img/everyone/search.png");
@@ -50,6 +50,7 @@
           transform: translateY(-20%);
         }
         .header__menu__button {
+          margin-left: 10px;
           margin-top: 5px;
           border-radius: 3px;
           width: 23px;
@@ -72,47 +73,51 @@
     .chatlist__body__list {
       overflow-y: scroll;
       margin-top: 1vh;
-      width: calc(100% - 3px);
+      width: calc(100%);
 
       .body__list__contact {
         position: relative;
         display: flex;
         align-items: center;
-        width: calc(100%);
+        width: 100%;
         height: 70px;
         margin-top: 2px;
+        transition: 0.2s ease;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         .list__contact__userName {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
           word-break: break-all;
           overflow: hidden;
           width: 60%;
           height: 18px;
           position: absolute;
           top: 10px;
-          left: 65px;
+          left: 75px;
           font-weight: bold;
           font-size: 16px;
           color: white;
         }
 
         .list__contact__content {
+          white-space: nowrap;
+          text-overflow: ellipsis;
           overflow: hidden;
           height: 18px;
           width: calc(100% - 100px);
           position: absolute;
           bottom: 10px;
-          left: 65px;
+          left: 75px;
 
           word-break: break-all;
-          font-size: 16px;
-          color: #888888;
-        }
-
-        .list__contact__LongContent {
-          height: 18px;
-          position: absolute;
-          bottom: 10px;
-          right: 12px;
           font-size: 16px;
           color: #888888;
         }
@@ -120,13 +125,14 @@
         .list__contact__time {
           position: absolute;
           top: 10px;
-          right: 10px;
+          right: 2%;
 
           font-size: 14px;
           color: #888888;
         }
 
         .list__contact__img {
+          margin-left: 10px;
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -138,31 +144,17 @@
           height: 60px;
 
           img {
+            width: fit-content;
             height: 100%;
           }
         }
       }
-    }
 
-    .chatlist__body__list::-webkit-scrollbar {
-      position: relative;
-      right: -10px;
-      width: 3px;
-    }
-    .chatlist__body__list::-webkit-scrollbar-thumb {
-      background-color: #979a9f;
-      border-radius: 2px;
+      .body__list__contact:hover {
+        background-color: #ffffff18;
 
-      transition: 0.2s ease-in-out;
+        transition: 0.2s ease;
+      }
     }
   }
-}
-
-.removeSelect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
